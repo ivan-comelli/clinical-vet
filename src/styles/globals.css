@@ -1,0 +1,89 @@
+@import url('variables.css');
+
+:root {
+  --sizing-sm: var(--dimension-1);
+  --sizing-md: var(--dimension-4);
+  --sizing-lg: var(--dimension-8);;
+  --sizing-xl: var(--dimension-12);;
+}
+
+@media (max-width: 599px) {
+  :root {
+    --spacing-sm: var(--spacing-mobile-sm);
+    --spacing-md: var(--spacing-mobile-md);
+    --spacing-lg: var(--spacing-mobile-lg);
+    --spacing-xl: var(--spacing-mobile-xl);
+    --app-column-count: var(--dimension-app-columns-mobile);
+    --app-gutter: var(--dimension-app-gutter-mobile);
+    --app-margin: var(--dimension-app-margin-mobile);
+    --app-body: var(--dimension-app-body-mobile);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 904px) {
+  :root {
+    --spacing-sm: var(--spacing-tablet-sm);
+    --spacing-md: var(--spacing-tablet-md);
+    --spacing-lg: var(--spacing-tablet-lg);
+    --spacing-xl: var(--spacing-tablet-xl);
+    --app-column-count: var(--dimension-app-columns-mobile-landscape);
+    --app-gutter: var(--dimension-app-gutter-mobile-landscape);
+    --app-margin: var(--dimension-app-margin-mobile-landscape);
+    --app-body: var(--dimension-app-body-mobile-landscape);
+  }
+}
+
+@media (min-width: 905px) and (max-width: 1239px) {
+  :root {
+    --spacing-sm: var(--spacing-tablet-sm);
+    --spacing-md: var(--spacing-tablet-md);
+    --spacing-lg: var(--spacing-tablet-lg);
+    --spacing-xl: var(--spacing-tablet-xl);
+    --app-column-count: var(--dimension-app-columns-tablet);
+    --app-gutter: var(--dimension-app-gutter-tablet);
+    --app-margin: var(--dimension-app-margin-tablet);
+    --app-body: var(--dimension-app-body-tablet);
+  }
+}
+
+@media (min-width: 1240px) and (max-width: 1439px) {
+  :root {
+    --spacing-sm: var(--spacing-laptop-sm);
+    --spacing-md: var(--spacing-laptop-md);
+    --spacing-lg: var(--spacing-laptop-lg);
+    --spacing-xl: var(--spacing-laptop-xl);
+    --app-column-count: var(--dimension-app-columns-laptop);
+    --app-gutter: var(--dimension-app-gutter-laptop);
+    --app-margin: var(--dimension-app-margin-laptop);
+    --app-body: var(--dimension-app-body-laptop);
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --spacing-sm: var(--spacing-desktop-sm);
+    --spacing-md: var(--spacing-desktop-md);
+    --spacing-lg: var(--spacing-desktop-lg);
+    --spacing-xl: var(--spacing-desktop-xl);
+    --app-column-count: var(--dimension-app-columns-desktop);
+    --app-gutter: var(--dimension-app-gutter-desktop);
+    --app-margin: var(--dimension-app-margin-desktop);
+    --app-body: var(--dimension-app-body-desktop);
+  }
+}
+
+html {
+  background: #f4f4f4;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  margin: 0;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2em;
+  margin: 0 var(--app-margin);
+  width: var(--app-body);
+}
